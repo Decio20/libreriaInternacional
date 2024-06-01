@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;;
+}
+
+ul{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header .encabezado{
+    background-color: #2C6561 !important;
+    height: 35px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    padding: 0px 10% !important;
+}
+
+header .encabezado ul li{
+    list-style: none;
+    display:inline-block;
+    color: white;
+    font-weight:300;
+    font-size: 15px;
+    margin: 0px 0px 0px 26px;
+}
+
+header .encabezado ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    margin: 0px 0px 0px 10px;
+}
+
+header .nav-bar{
+    background-color: white;
+    padding: 0px 10%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .nav-bar .logo img{
+    cursor:pointer;
+}
+
+header .nav-bar .buscador{
+    width: 400px;
+    background-color: white;
+}
+
+header .nav-bar .buscador input{
+    width: 79%;
+    height: 100%;
+    background: none;
+    padding-top: 20px;
+    border:none;
+    outline: 0px;
+    font-weight:200;
+    padding: 5px; 
+    border-bottom: 1px solid #2C6561;
+    color: #000;
+}
+
+header .nav-bar .buscador label{
+    display: inline-block;
+    width: 20%;
+}
+
+header .nav-bar .buscador .miLabel{
+    background-color: #2C6561;
+    color:#dee8e8;
+    padding: 7px 14px;
+    border:none;
+    border-radius: 2.5px;
+    font-weight:100;
+} 
+
+
+header .nav-bar .links ul li{
+    list-style: none;
+    display:inline-block;
+    margin: 0px 0px 0px 15px;
+    cursor: pointer;
+}
+
+header .nav-bar .links ul li  i{
+    color: #CF6C3B;
+    font-size: 19px;
+}
+
+header .nav-bar .links ul li a{
+    text-decoration: none;
+    font-weight:300;
+    color:#2C6561;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+header .nav-bar .links ul li a:hover{
+    color: #CF6C3B;
+}
+
+header .nav-bar .links ul li i, header .nav-bar .links ul li a{
+    display:block;
+    text-align: center;
+}
+
+header .header-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10%;
+    height: 60px;
+    background-color: #f4f4f4;
+    font-weight: 300;
+}
+
+header .header-footer button{
+    width: 130px;
+    height: 60%;
+    background-color: #2C6561;
+    color: #dee8e8;
+    border: none;
+    border-radius: 5px;
+    padding: 0 15px 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header .header-footer button i{
+    margin-right: 4px;
+    
+}
+
+header .header-footer .header-footer__links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 0px 0px 35px;
+}
+
+header .header-footer .header-footer__links ul li a{
+    text-decoration: none;
+    color:#2C6561;
+}
+
+header .header-footer .header-footer__links ul li a:hover{
+    cursor:pointer;
+    color:#CF6C3B;
+    transition: 0.5s;
+}
+
+/* La parte de componentes hamburguesa */
+header .nav-bar .abrir{
+    display:none;
+}
+
+header .nav-bar .links-hamburguer ul li{
+    list-style: none;
+    display: inline-block;
+    gap: 0.5rem;
+}
+
+header .nav-bar .links-hamburguer ul li a{
+    text-decoration: none;
+    color: #CF6C3B;
+    
+}
+
+header .nav-bar .links-hamburguer{
+    display:none;
+}
+
+@media screen and (max-width: 1144px){
+
+    header .nav-bar{
+        padding: 0px 0.5rem;
+       
+    }
+
+    @media (max-width: 932px){
+        header .nav-bar .buscador{
+            display: none;
+        }   
+    }
+
+    @media (max-width:700px) {
+        header .encabezado{
+            display: none !important;
+        }  
+        
+        header .header-footer{
+            display: none;
+        }
+    }
+
+    @media (max-width: 590px){
+        
+
+        header .nav-bar .links{
+            display:none;
+        }
+
+        header .nav-bar .abrir{
+            display:block;
+        }
+
+        header .nav-bar .links-hamburguer{
+            opacity: 0;
+            visibility: hidden; 
+
+            display:flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFF;
+        }
+
+        header .nav-bar .links-hamburguer.visible{
+            opacity:1;
+            visibility:visible;
+        }
+
+        header .nav-bar .links-hamburguer ul{
+            display:flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+
+    }
+}
